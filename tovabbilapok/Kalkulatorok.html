@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>The Big Bank</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/stílus-kalkulátorok.css">
+    <link rel="shortcut icon" href="../img/logofent.png" />
+</head>
+
+<body>
+
+    <div class="pos-f-t">
+        <nav class="navbar navbar-dark bg-dark">
+            <ul>
+                <li><a href="../index.html">Kezdőlap</a></li>
+                <li><a href="../tovabbilapok/Kalkulatorok.html" id="active">Kalkulátorok</a></li>
+                <li><a href="../tovabbilapok/Szolgáltatások.html">Szolgáltatások</a></li>
+                <li><a href="../tovabbilapok/Tanácsadás.html">Tanácsadás</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="fodoboz">
+        
+        <div id="cimsor">
+            <h1 id="cim">Kalkulátorok</h1>
+            <hr>
+        </div>
+        <div id="kalkulatorElso">
+        <h3>Hitelkalkulátor</h3>
+        <form>
+            <input type="number" id="hitelSzam" placeholder="500000-30000000" class="bemenetSzám" />
+            
+            <input type="range" min="2" max="24" id="futamido_1" onchange="slider_1Value();" class="slider">
+            
+            
+            <button type="button" id="btn" onclick="hitelKalkulalas();" class="gomb1">Számol</button><br>
+            <p id="sliderValue_1"></p>
+                
+            <span id="kalkulatHitel"></span>
+                
+        </form>
+</div>
+
+<div id="kalkulatorMasodik">
+        <h3>Kamatkalkulátor</h3>
+        <form>
+            <input type="number" id="kamatSzam" placeholder="100000-100000000" class=""/>
+            
+            <input type="range" min="1" max="120" id="futamido_2" onchange="slider_2Value();" class="slider">
+           
+            <p id="sliderValue_2" class="slider"></p>
+            <button type="button" id="btn" onclick="lekotesKalkulalas();" class="gomb2">Számol</button>
+            <span id="kamatkalkulator" class="szoveg"></span>
+        </form>
+    </div>
+</div>
+    <script src="../js/kalkulatorok.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>The Big Bank</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stílus.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="img/logofent.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body onload="kiszamol();">
+
+    <div class="pos-f-t">
+        <nav class="navbar navbar-dark bg-dark">
+            <ul>
+                <li><a href="index.html" id="active">Kezdőlap</a></li>
+                <li><a href="tovabbilapok/Kalkulatorok.html">Kalkulátorok</a></li>
+                <li><a href="tovabbilapok/Szolgáltatások.html">Szolgáltatások</a></li>
+                <li><a href="tovabbilapok/Tanácsadás.html">Tanácsadás</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="fodoboz">
+  
+               
+        <div id="kepesdoboz">
+       
+          <h1 id="cim">Üdvözöljük a The Big Bank oldalán!</h1>
+          <hr>
+        </div>
+
+
+        <div class="card" id="dobozfelso">
+
+            <div id="valutaarfolyam">
+                <h2>Valuta-deviza árfolyamok</h2>
+                <div id="penzek">
+                    <p id="eur" class="valuta"><b>EUR: <span id="euro"></span></b></p>
+                    <p id="usd" class="valuta"><b>USD: <span id="usdd"></span></b></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card" id="dobozalso">
+
+            <div class="valuatvalto">
+                <h2>Valuta váltó</h2>
+                <div id="valutavalto">
+                    <select id="mirol" onchange="kiszamol();">
+                    <option value="AED">AED</option>
+                    <option value="ARS">ARS</option>
+                    <option value="AUD">AUD</option>
+                    <option value="BGN">BGN</option>
+                    <option value="BRL">BRL</option>
+                    <option value="BSD">BSD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CLP">CLP</option>
+                    <option value="CNY">CNY</option>
+                    <option value="COP">COP</option>
+                    <option value="CZK">CZK</option>
+                    <option value="DKK">DKK</option>
+                    <option value="DOP">DOP</option>
+                    <option value="EGP">EGP</option>
+                    <option value="EUR" selected>EUR</option>
+                    <option value="FJD">FJD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="GTQ">GTQ</option>
+                    <option value="HKD">HKD</option>
+                    <option value="HRK">HRK</option>
+                    <option value="HUF">HUF</option>
+                    <option value="IDR">IDR</option>
+                    <option value="ILS">ILS</option>
+                    <option value="INR">INR</option>
+                    <option value="ISK">ISK</option>
+                    <option value="JPY">JPY</option>
+                    <option value="KRW">KRW</option>
+                    <option value="KZT">KZT</option>
+                    <option value="MXN">MXN</option>
+                    <option value="MYR">MYR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                    <option value="PAB">PAB</option>
+                    <option value="PEN">PEN</option>
+                    <option value="PHP">PHP</option>
+                    <option value="PKR">PKR</option>
+                    <option value="PLN">PLN</option>
+                    <option value="PYG">PYG</option>
+                    <option value="RON">RON</option>
+                    <option value="RUB">RUB</option>
+                    <option value="SAR">SAR</option>
+                    <option value="SEK">SEK</option>
+                    <option value="SGD">SGD</option>
+                    <option value="THB">THB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="TWD">TWD</option>
+                    <option value="UAH">UAH</option>
+                    <option value="USD">USD</option>
+                    <option value="UYU">UYU</option>
+                    <option value="VND">VND</option>
+                    <option value="ZAR">ZAR</option>
+                    </select>
+                    <input type="number" id="from" placeholder="0" value="1" size="20" onkeyup="kiszamol();" />
+                </div>
+
+                
+                <div id="valutavalto">
+                    <select id="mire" onchange="kiszamol();">
+                    <option value="AED">AED</option>
+                    <option value="ARS">ARS</option>
+                    <option value="AUD">AUD</option>
+                    <option value="BGN">BGN</option>
+                    <option value="BRL">BRL</option>
+                    <option value="BSD">BSD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CLP">CLP</option>
+                    <option value="CNY">CNY</option>
+                    <option value="COP">COP</option>
+                    <option value="CZK">CZK</option>
+                    <option value="DKK">DKK</option>
+                    <option value="DOP">DOP</option>
+                    <option value="EGP">EGP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="FJD">FJD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="GTQ">GTQ</option>
+                    <option value="HKD">HKD</option>
+                    <option value="HRK">HRK</option>
+                    <option value="HUF" selected>HUF</option>
+                    <option value="IDR">IDR</option>
+                    <option value="ILS">ILS</option>
+                    <option value="INR">INR</option>
+                    <option value="ISK">ISK</option>
+                    <option value="JPY">JPY</option>
+                    <option value="KRW">KRW</option>
+                    <option value="KZT">KZT</option>
+                    <option value="MXN">MXN</option>
+                    <option value="MYR">MYR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                    <option value="PAB">PAB</option>
+                    <option value="PEN">PEN</option>
+                    <option value="PHP">PHP</option>
+                    <option value="PKR">PKR</option>
+                    <option value="PLN">PLN</option>
+                    <option value="PYG">PYG</option>
+                    <option value="RON">RON</option>
+                    <option value="RUB">RUB</option>
+                    <option value="SAR">SAR</option>
+                    <option value="SEK">SEK</option>
+                    <option value="SGD">SGD</option>
+                    <option value="THB">THB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="TWD">TWD</option>
+                    <option value="UAH">UAH</option>
+                    <option value="USD">USD</option>
+                    <option value="UYU">UYU</option>
+                    <option value="VND">VND</option>
+                    <option value="ZAR">ZAR</option>
+                  </select>
+                    <input type="text" id="to" size="20" onkeyup="kiszamol()" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div id="kepreklam">
+<div id="idezet">
+<p >"A mindennapi pénzügyei intézéséhez elengedhetetlen a bankszámla. Használatával kényelmesen teljesítheti hétköznapi fizetési megbízásait. Válassza az igényeinek leginkább megfelelő szolgáltatásainkat!"</p>
+
+</div>
+
+</div>
+
+
+<div id="fodoboz2">
+    <h1 id="hirek">Híreink</h1>
+    <div class="container" id="karytaktomb">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 21rem;" id="kartya">
+                <img src="img/hir3ű.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  
+                  <p class="card-text">Elkezdődött a járvány utáni első gazdasági csúcstalálkozó Szentpéterváron</p>
+                 </div>
+                 <a href="https://hu.euronews.com/2021/06/03/elkezdodott-a-jarvany-utani-elso-gazdasagi-csucstalalkozo-szentpetervaron" class="btn btn-primary" id="gomb" >Részletek</a>
+                
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 21rem;" id="kartya" >
+                <img src="img/hi2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  
+                  <p class="card-text">Kriptovaluta konferencia Dubajban</p>
+                 </div>
+                 <a href="https://hu.euronews.com/2021/06/03/kriptovaluta-konferencia-dubajban" class="btn btn-primary" id="gomb">Részletek</a>
+                
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 21rem;" id="kartya" >
+                <img src="img/hir1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  
+                  <p class="card-text">A piac és a közbeszerzés járványhelyzet idején</p>  
+                  </div>
+                  <a href="https://www.penzugyiszemle.hu/tanulmanyok-eloadasok/a-piac-es-a-kozbeszerzes-jarvanyhelyzet-idejen" class="btn btn-primary" id="gomb">Részletek</a>
+               
+              </div>
+              
+          </div>
+         
+        </div>
+      </div>
+
+
+    </div>
+
+<div id="lablec">
+
+<p id="keszitok">Készítette : Angel Levente, Lipták Róbert</p>
+    </div>
+<script src="js/valutaValto.js"></script>
+</body>
+
+</html>
+
